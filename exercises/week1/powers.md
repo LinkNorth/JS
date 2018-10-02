@@ -1,6 +1,6 @@
 # Powers
 
-Write a function `powers` that takes an array of numbers as argument first argument, and a single number as second argument. Return a new array with all numbers in the given array mapped to the nth power given by the second argument.
+Write a function `powers` that takes an array of numbers as first argument, and a single number as second argument. Return a new array with all numbers in the given array mapped to the nth power given by the second argument.
 
 *Example*
 ```
