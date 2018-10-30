@@ -4,7 +4,7 @@
 
 Write a function `toCamelCase` that takes a single string as argument. The function should return the argument formatted as a Camel case string.   
 
-*Example*
+**Example**
 
 ```
 toCamelCase("Hello World") // -> "helloWorld"
@@ -14,7 +14,7 @@ toCamelCase("Hello World") // -> "helloWorld"
 
 Write a function `toSnakeCase` that takes a single string as argument. The function should return the argument formatted as Snake case.   
 
-*Example*
+**Example**
 
 ```
 toSnakeCase("Hello World") // -> "hello_world"
@@ -23,7 +23,7 @@ toSnakeCase("Hello World") // -> "hello_world"
 ## Converting
 Write two functions, one `fromSnakeToCamel` and another `fromCamelToSnake` that takes either a camelCase formatted string or a snakeCase one. The function should return the other type of casing.   
 
-*Example*
+**Example**
 
 ```
 fromSnakeToCamel('hello_world') // -> "helloWorld"
