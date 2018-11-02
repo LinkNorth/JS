@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+    main {
+      width: 350px;
+      margin: auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form label {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    form label input {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+  <h1>Ugly forms Inc.</h1>
+  <form action="#" method="POST">
+    <label>
+      Name:
+      <input type="text" name="name" />
+    </label>
+    <label>
+      Age:
+      <input type="text" name="age" />
+    </label>
+    <label>
+      Username:
+      <input type="text" name="username" />
+    </label>
+    <label>
+      Password:
+      <input type="password" name="password" />
+    </label>
+    <label>
+      Repeat password:
+      <input type="password" name="passwordrepeat" />
+    </label>
+    <button type="submit">Register</button>
+  </form>
+</main>
+</body>
+</html>
