@@ -1,5 +1,8 @@
 // Expected result: 120
-let result = sum(doubleAll(removeNumbersOverX([10, 20, 30, 40, 50], 30)));
+debugger;
+let filter = removeNumbersOverX([10, 20, 30, 40, 50], 30);
+let double = doubleAll(filter);
+let result = sum(double);
 console.log(result);
 
 // Return sum of all numbers in arr
@@ -11,17 +14,18 @@ function sum(arr) {
 
 // Double all numbers in arr
 function doubleAll(arr) {
-  return arr.map(function(x) {
-    x * 2;
+  let result =  arr.map(function(x) {
+    return x * 2;
   });
+  return result;
 }
 
 // Remove all numbers in arr that is over x
 function removeNumbersOverX(arr, x) {
   let newArray = [];
-  for (let i = 0; i < arr; i += 1) {
+  for (let i = 0; i < arr.length; i += 1) {
     let value = arr[i];
-    if (value > x) {
+    if (value <= x) {
       newArray.push(value);
     }
   }
