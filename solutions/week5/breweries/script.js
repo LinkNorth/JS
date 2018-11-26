@@ -3,6 +3,10 @@ function capitalize(str) {
 }
 
 function createTable(data, keys, atElement) {
+  let currentTable = document.querySelector('table');
+  if (currentTable !== null) {
+    currentTable.parentElement.removeChild(currentTable);
+  }
   let table = document.createElement('table');
   
   let thead = document.createElement('thead');
@@ -43,11 +47,35 @@ function onResponse() {
   }
 }
 
-function doReq() {
+function doReq(page) {
   let req = new XMLHttpRequest();
   req.addEventListener('load', onResponse);
-  req.open('GET', 'https://api.openbrewerydb.org/breweries');
+  req.open('GET', 'https://api.openbrewerydb.org/breweries?page=' + page);
   req.send();
 }
 
-doReq();
+let page = 1;
+function next() {
+  page++;
+  doReq(page);
+}
+
+function prev() {
+  if (page > 1) {
+    page--;
+    doReq(page);
+  }
+}
+
+let prevButton = document.createElement('button');
+prevButton.textContent = "Prev";
+prevButton.addEventListener('click', prev);
+document.body.appendChild(prevButton);
+
+let nextButton = document.createElement('button');
+nextButton.textContent = "Next";
+nextButton.addEventListener('click', next);
+document.body.appendChild(nextButton);
+
+
+doReq(page);
