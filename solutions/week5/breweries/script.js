@@ -34,6 +34,20 @@ function createTable(data, keys, atElement) {
   atElement.appendChild(table);
 }
 
-let tableData = [{"id":2,"name":"Avondale Brewing Co","brewery_type":"micro","street":"201 41st St S","city":"Birmingham","state":"Alabama","postal_code":"35222-1932","country":"United States","longitude":"-86.774322","latitude":"33.524521","phone":"2057775456","website_url":"http://www.avondalebrewing.com","updated_at":"2018-08-23T23:19:57.825Z"}];
+function onResponse() {
+  if (this.status === 200) {
+    let data = JSON.parse(this.responseText);
+    createTable(data, ['name', 'street', 'city'], document.querySelector('body'));
+  } else {
+    console.error('Invalid status', this);
+  }
+}
 
-createTable(tableData, ['name', 'street', 'city'], document.querySelector('body'));
+function doReq() {
+  let req = new XMLHttpRequest();
+  req.addEventListener('load', onResponse);
+  req.open('GET', 'https://api.openbrewerydb.org/breweries');
+  req.send();
+}
+
+doReq();
