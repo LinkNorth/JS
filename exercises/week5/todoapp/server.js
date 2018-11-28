@@ -33,6 +33,7 @@ app.post('/todos', (req, res) => {
   }
   ID++;
   todo.id = ID;
+  if (!todo.amount) todo.amount = 1;
   todos.push(todo);
   res.status(201);
   res.send(todo);
@@ -64,7 +65,7 @@ app.put('/todos/:id', (req, res) => {
   }
 
   let todo = req.body;
-  if (!todo || !todo.title || todo.title.length < 2) {
+  if (!todo || (!todo.title || todo.title.length < 2) || !todo.amount) {
     res.status(400);
     res.end();
     return;
@@ -73,7 +74,12 @@ app.put('/todos/:id', (req, res) => {
   let f = find(id);
   let index = f.index;
   if (typeof index !== 'undefined') {
-    todos[index].title = todo.title;
+    if (todo.title) {
+      todos[index].title = todo.title;
+    }
+    if (todo.amount) {
+      todos[index].amount = todo.amount;
+    }
     res.status(200);
     res.json(todos[index]);
   } else {
