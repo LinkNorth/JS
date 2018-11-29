@@ -22,10 +22,10 @@ The teacher will look in the **master branch**. If any commits are done to the m
 You will either get **G** or **IG** on the mandatory exercises.
 
 ## Resources
-https://dog.ceo/dog-api/documentation/
-https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
-https://developer.mozilla.org/en-US/docs/Web/API/Window/location
+https://dog.ceo/dog-api/documentation/   
+https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX   
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON   
+https://developer.mozilla.org/en-US/docs/Web/API/Window/location   
 
 ## Instructions
 
