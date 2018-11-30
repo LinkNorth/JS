@@ -10,7 +10,9 @@ function req(method, url, data, cb) {
       if (this.responseText) {
         data = JSON.parse(this.responseText);
       } 
-      if (typeof cb === 'function') cb(data);
+      if (typeof cb === 'function') cb(null, data);
+    } else {
+      if (typeof cb === 'function') cb(new Error('Invalid status'), null);
     }
   });
 
@@ -72,8 +74,12 @@ function renderList(list) {
 }
 
 function getDataAndRender() {
-  req('GET', '/todos', undefined, function(data) {
-    renderList(data.data);
+  req('GET', '/todos', undefined, function(err, data) {
+    if (err) {
+      console.error(err);
+    } else {
+      renderList(data.data);
+    }
   });
 }
 
