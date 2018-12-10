@@ -1,0 +1,11 @@
+.buttons {
+  margin-bottom: 10px;
+}
+
+
+#box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
