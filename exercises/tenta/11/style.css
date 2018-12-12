@@ -1,0 +1,15 @@
+body {
+  height: 10000px;
+}
+
+.largecontent {
+  height: 450px;
+  background-color: gray;
+}
+
+.sticky {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}

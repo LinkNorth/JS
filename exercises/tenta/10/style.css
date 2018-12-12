@@ -1,0 +1,16 @@
+.tabs {
+  overflow: hidden;
+}
+
+.tabs-selectors .tabs-selector {
+  float: left;
+  margin-left: 10px;
+}
+
+.selected {
+  color: green;
+}
+
+.tabs-content {
+  clear: both;
+}
