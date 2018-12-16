@@ -10,5 +10,5 @@ renderPlanets([
   {name: 'Jupiter', mass: 317.8, period: 11.86, moons: 79},
   {name: 'Saturn', mass: 95.2, period: 29.46, moons: 62},
   {name: 'Uranus', mass: 14.6, period: 84.01, moons: 27},
-  {name: 'Neptune', mass: 17.2, 164.8, moons: 14},
+  {name: 'Neptune', mass: 17.2, period: 164.8, moons: 14},
 ]);
