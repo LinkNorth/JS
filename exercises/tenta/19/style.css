@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+
+div {
+  margin: auto;
+  background-color: #CCC;
+  width: 500px;
+  height: 500px;
+  padding-top: 30px;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+}
