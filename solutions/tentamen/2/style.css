@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+button {
+  color: #FFF;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}

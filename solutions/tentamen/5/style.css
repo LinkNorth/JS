@@ -1,0 +1,19 @@
+.outer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.inner {
+  background-color: gray;
+  width: 200px;
+  height: 200px;
+}
+
+.ball {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: inline-block;
+}
